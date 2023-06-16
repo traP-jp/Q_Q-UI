@@ -8,17 +8,17 @@ import type { Store, traQMarkdownIt } from '@traptitech/traq-markdown-it'
 // import { useStampsStore } from '/@/store/entities/stamps'
 
 const storeProvider: Store = {
-  getUser(id) {
+  getUser(_id) {
     // const { usersMap } = useUsersStore()
     // return usersMap.value.get(id)
     return undefined
   },
-  getChannel(id) {
+  getChannel(_id) {
     // const { channelsMap } = useChannelsStore()
     // return channelsMap.value.get(id)
     return undefined
   },
-  getUserGroup(id) {
+  getUserGroup(_id) {
     // const { userGroupsMap } = useGroupsStore()
     // return userGroupsMap.value.get(id)
     return undefined
@@ -28,26 +28,26 @@ const storeProvider: Store = {
     // return detail.value
     return undefined
   },
-  getStampByName(name) {
+  getStampByName(_name) {
     // const { getStampByName } = useStampsStore()
     // return getStampByName(name)
     return undefined
   },
-  getUserByName(name) {
+  getUserByName(_name) {
     // const { findUserByName } = useUsersStore()
     // return findUserByName(name)
     return undefined
   },
-  generateChannelHref(id) {
+  generateChannelHref(_id) {
     // const { channelIdToLink } = useChannelPath()
     // return `${embeddingOrigin}${channelIdToLink(id)}`
     return ''
   },
-  generateUserHref(id) {
+  generateUserHref(_id) {
     // return `javascript:openUserModal(${encodeURIComponent(JSON.stringify(id))})`
     return ''
   },
-  generateUserGroupHref(id) {
+  generateUserGroupHref(_id) {
     // return `javascript:openGroupModal(${encodeURIComponent(
     //   JSON.stringify(id)
     // )})`
