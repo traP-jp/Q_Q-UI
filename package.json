@@ -12,6 +12,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@traptitech/traq-markdown-it": "^6.3.0",
+    "sass": "^1.63.4",
     "vue": "^3.2.47",
     "vue-router": "^4.2.2"
   },

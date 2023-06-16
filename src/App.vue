@@ -14,6 +14,9 @@
 
 <script setup lang="ts">
 import AppHeaderVue from './components/AppHeader.vue'
+
+const $html = document.documentElement
+$html.dataset['codeHighlight'] = 'light'
 </script>
 
 <style scoped></style>
