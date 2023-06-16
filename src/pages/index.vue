@@ -7,12 +7,12 @@
       <img :src="VueImage" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <hello-world msg="Vite + Vue" />
 </template>
 
 <script setup lang="ts">
-import HelloWorld from "/@/components/HelloWorld.vue";
-import VueImage from "/@/assets/vue.svg";
+import HelloWorld from '/@/components/HelloWorld.vue'
+import VueImage from '/@/assets/vue.svg'
 </script>
 
 <style scoped>

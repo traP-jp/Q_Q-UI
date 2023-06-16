@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import AppHeaderVue from "./components/AppHeader.vue";
+import AppHeaderVue from './components/AppHeader.vue'
 </script>
 
 <style scoped></style>
