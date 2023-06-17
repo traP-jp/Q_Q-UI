@@ -1,6 +1,6 @@
 <template>
-  <page-container
-    ><search-button />
+  <page-container>
+    <search-button />
     <h2>よくある質問</h2>
     <frequently-asked></frequently-asked>
   </page-container>
@@ -16,7 +16,7 @@ import FrequentlyAsked from '/@/components/FrequentlyAsked.vue'
 html {
   font-size: 16px;
 }
-h2{
+h2 {
   padding-bottom: 30px;
 }
 </style>

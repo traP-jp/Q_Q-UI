@@ -1,84 +1,72 @@
-<template>
-  <div class="question">
-    <div class="content">今日のご飯は何がいいですか？</div>
-    <div class="createdAt">2023/06/17 16:30</div>
-    <div class="responseNum">◆2</div>
-    <div class="tags">tags:</div>
-  </div>
+<script setup lang="ts">
+import { sampleQuestions } from '/@/apis/question.sample.ts'
+</script>
 
-  <div class="question">
-    <div class="content">今日のご飯は何がいいですか？</div>
-    <div class="createdAt">2023/06/17 16:30</div>
-    <div class="responseNum">◆2</div>
-    <div class="tags">tags:</div>
-  </div>
-  <div class="question">
-    <div class="content">今日のご飯は何がいいですか？</div>
-    <div class="createdAt">2023/06/17 16:30</div>
-    <div class="responseNum">◆2</div>
-    <div class="tags">tags:</div>
-  </div>
-  <div class="question">
-    <div class="content">今日のご飯は何がいいですか？</div>
-    <div class="createdAt">2023/06/17 16:30</div>
-    <div class="responseNum">◆2</div>
-    <div class="tags">tags:</div>
-  </div>
-  <div class="question">
-    <div class="content">今日のご飯は何がいいですか？</div>
-    <div class="createdAt">2023/06/17 16:30</div>
-    <div class="responseNum">◆2</div>
-    <div class="tags">tags:</div>
+<template>
+  <div v-for="details in sampleQuestions" :key="details.name">
+    <div class="question">
+      <div class="content">{{ details.content }}</div>
+      <div class="grid-container">
+        <div class="createdAt">{{ details.createdAt }}</div>
+        <div class="responseNum">💭{{ details.responseNum }}</div>
+        <div class="tagsarea">
+          <div v-for="tags1 in details.tags" :key="tags1">
+            <div class="tags">#{{ tags1 }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
-<style>
-html {
-  font-size: 14px;
-}
+<style scoped>
 .question {
-  display: grid;
-  /* justify-items: center; */
-  align-items: center;
-  grid-template-columns: 3fr 1fr 8fr;
-  grid-template-rows: auto auto;
-  max-width: 712px;
-  max-height: 64px;
   border-top: solid 1px #d9d9d9;
+}
+
+.grid-container {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  max-width: 712px;
+  max-height: 32px;
 }
 
 .content {
   font-size: 16px;
   color: #000000;
-  grid-column: 1 /5;
-  grid-row: 1 /2;
   padding-left: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
 .createdAt {
+  font-size: 1rem;
   color: #919191;
-  grid-column: 1 /2;
-  grid-row: 2 /3;
+  white-space: nowrap;
   padding-top: 3px;
   padding-bottom: 4px;
   padding-left: 20px;
 }
 
 .responseNum {
+  font-size: 1rem;
   color: #919191;
-  grid-column: 2 /3;
-  grid-row: 2 /3;
+  white-space: nowrap;
   padding-bottom: 5px;
   padding-left: 10px;
 }
 
+.tagsarea {
+  white-space: nowrap;
+  display: flex;
+  overflow: hidden;
+}
 .tags {
+  font-size: 1rem;
   color: #919191;
-  grid-column: 3 /4;
-  grid-row: 2/ 3;
   padding-bottom: 5px;
   padding-left: 30px;
+  overflow: hidden;
 }
 </style>
