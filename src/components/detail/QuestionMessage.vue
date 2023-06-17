@@ -9,7 +9,7 @@
           <p>{{ question.responseNum }}</p>
         </div>
         <div class="bars">
-          <icon icon="ic:baseline-favorite" class="icon" />
+          <icon icon="ic:baseline-favorite" class="icon heart" />
           <p>{{ question.favs }}</p>
         </div>
       </div>
@@ -44,6 +44,7 @@ const user = {
   justify-content: flex-start;
   gap: 8px;
   text-align: center;
+  color: #919191;
 }
 .message-footer {
   display: flex;
@@ -57,6 +58,9 @@ const user = {
 .icon {
   width: 20px;
   height: 20px;
+}
+.heart {
+  color: #ff6b6b;
 }
 .cardbox {
   border-radius: 8px;

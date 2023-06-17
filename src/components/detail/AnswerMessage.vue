@@ -3,8 +3,8 @@
     <message-header :user="user" date="2023/01/02" />
     <message-content :content="answer.content" />
     <div class="message-footer">
-      <div class="bar">
-        <icon icon="ic:baseline-favorite" class="icon" />
+      <div class="toolbar">
+        <icon icon="ic:baseline-favorite" class="icon heart" />
         <span>{{ answer.favs }}</span>
       </div>
       <open-in-traq :id="answer.id" />
@@ -37,16 +37,21 @@ const user = {
   display: flex;
   justify-content: space-between;
 }
-.bar {
+.toolbar {
   display: flex;
   align-items: center;
   text-align: center;
   gap: 2px;
+  color: #919191;
 }
 
 .icon {
   width: 20px;
   height: 20px;
+}
+
+.heart {
+  color: #ff6b6b;
 }
 
 .cardbox {
