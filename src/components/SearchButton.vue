@@ -4,6 +4,7 @@ import SearchSVG from '/@/assets/search.svg'
 </script>
 
 <template>
+  <p id="type-3"></p>
   <div class="SearchArea">
     <input
       v-model="SearchName"
@@ -13,13 +14,12 @@ import SearchSVG from '/@/assets/search.svg'
     />
     <img :src="SearchSVG" alt="検索" class="icon" />
 
-    <!-- <div class="SearchButton">🔍</div> -->
   </div>
 </template>
 
 <style scoped>
 .SearchArea {
-  margin: 0 auto;
+  margin: 100px auto;
   max-width: 600px;
   display: grid;
   place-content: center;
@@ -29,9 +29,10 @@ import SearchSVG from '/@/assets/search.svg'
   padding-left: 7px;
   grid-template-columns: 1fr 50px;
   grid-template-rows: auto;
-  border: solid 2px black;
+  border: solid 1px #d9d9d9;
+  box-shadow:2px 2px 4px 2px #d9d9d9;
   border-radius: 10px;
-  /* background-color: aqua;  */
+
 }
 
 .SearchBox {
