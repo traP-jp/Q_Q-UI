@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="search-container">
     <input
       v-model="value"
       type="text"
@@ -31,7 +31,7 @@ const value = computed({
 </script>
 
 <style scoped>
-.wrapper {
+.search-container {
   display: flex;
   align-items: center;
   height: 40px;

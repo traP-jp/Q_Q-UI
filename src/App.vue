@@ -18,8 +18,9 @@ import AppHeaderVue from './components/AppHeader.vue'
 
 <style scoped>
 .container {
-  display: grid;
+  position: relative;
   height: 100%;
-  grid-template-rows: auto 1fr;
+  padding-top: 64px;
+  padding-bottom: 32px;
 }
 </style>
