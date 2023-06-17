@@ -2,7 +2,7 @@ import { z } from 'zod'
 
 export const stampCountSchema = z.object({
   id: z.string().uuid(),
-  message_id: z.string().uuid(),
+  messageId: z.string().uuid(),
   count: z.number()
 })
 
