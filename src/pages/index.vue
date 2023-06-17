@@ -13,9 +13,12 @@ import FrequentlyAsked from '/@/components/FrequentlyAsked.vue'
 </script>
 
 <style scoped>
-html {
-  font-size: 16px;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
 }
+
 h2 {
   padding-bottom: 30px;
 }
