@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <app-header-vue />
     <Suspense>
       <template #default>
@@ -16,4 +16,10 @@
 import AppHeaderVue from './components/AppHeader.vue'
 </script>
 
-<style scoped></style>
+<style scoped>
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-rows: auto 1fr;
+}
+</style>
