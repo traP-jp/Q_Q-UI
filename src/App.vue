@@ -1,16 +1,14 @@
 <template>
   <div class="container">
     <app-header-vue />
-    <main>
-      <Suspense>
-        <template #default>
-          <router-view />
-        </template>
-        <template #fallback>
-          <loading />
-        </template>
-      </Suspense>
-    </main>
+    <Suspense>
+      <template #default>
+        <router-view />
+      </template>
+      <template #fallback>
+        <loading />
+      </template>
+    </Suspense>
   </div>
 </template>
 
