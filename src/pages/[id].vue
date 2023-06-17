@@ -1,6 +1,6 @@
 <template>
   <page-container>
-    <p>{{ sampleQuestionDetails.question.content }}</p>
+    <p class="main-title">{{ sampleQuestionDetails.question.content }}</p>
     <div>
       <question-message :question="sampleQuestionDetails.question" />
       <answer-message
@@ -24,4 +24,11 @@ import { useParam } from '/@/use/param'
 const questionId = useParam('id')
 </script>
 
-<style scoped></style>
+<style scoped>
+.main-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+</style>

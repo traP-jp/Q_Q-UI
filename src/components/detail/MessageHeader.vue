@@ -1,12 +1,12 @@
 <template>
-  <div>
-    <img :src="imgUrl" :alt="user.name" />
-    <div>
+  <div class="container">
+    <img :src="imgUrl" :alt="user.name" class="icon" />
+    <div class="name-container">
       <p>
-        <span>{{ user.displayName }}</span
-        ><span>{{ user.name }}</span>
+        <span class="display-name">{{ user.displayName }}</span
+        ><span class="id-name">@{{ user.name }}</span>
       </p>
-      <p>{{ date }}</p>
+      <p class="date">{{ date }}</p>
     </div>
   </div>
 </template>
@@ -25,4 +25,32 @@ const imgUrl = computed(
 )
 </script>
 
-<style scoped></style>
+<style scoped>
+.container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.name-container {
+  width: 100%;
+}
+.display-name {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #262626;
+}
+.id-name {
+  font-size: 0.875rem;
+  color: #919191;
+}
+.date {
+  font-size: 0.875rem;
+  color: #919191;
+}
+</style>

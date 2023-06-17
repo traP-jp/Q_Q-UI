@@ -1,5 +1,5 @@
 <template>
-  <p>{{ content }}</p>
+  <p class="message">{{ content }}</p>
 </template>
 
 <script setup lang="ts">
@@ -10,4 +10,8 @@ interface Props {
 defineProps<Props>()
 </script>
 
-<style scoped></style>
+<style scoped>
+.message {
+  padding: 16px;
+}
+</style>
