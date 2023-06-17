@@ -1,5 +1,15 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { sampleQuestions } from '/@/apis/question.sample.ts'
+const date = new Date()
+const y = date.getFullYear()
+const mo = date.getMonth() + 1
+const d = date.getDate()
+const h = date.getHours()
+const mi = date.getMinutes()
+const questiondatelist = ref<Questions[]>([
+  { year: y, month: mo, day: d, hour: h, minute: mi }
+])
 </script>
 
 <template>
@@ -7,7 +17,14 @@ import { sampleQuestions } from '/@/apis/question.sample.ts'
     <div class="question">
       <div class="content">{{ details.content }}</div>
       <div class="grid-container">
-        <div class="createdAt">{{ details.createdAt }}</div>
+        <div v-for="questiondate in questiondatelist" :key="questiondate">
+          <div class="createdAt">
+            {{ questiondate.year }}/{{ questiondate.month }}/{{
+              questiondate.day
+            }}
+            {{ questiondate.hour }}:{{ questiondate.minute }}
+          </div>
+        </div>
         <div class="responseNum">💭{{ details.responseNum }}</div>
         <div class="tagsarea">
           <div v-for="tags1 in details.tags" :key="tags1">
