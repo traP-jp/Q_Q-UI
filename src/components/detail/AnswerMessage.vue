@@ -7,12 +7,13 @@
         <icon icon="ic:baseline-favorite" class="icon heart" />
         <span>{{ answer.favs }}</span>
       </div>
-      <open-in-traq :id="answer.id" />
+      <open-in-tra-q :id="answer.id" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import OpenInTraQ from './OpenInTraQ.vue'
 import MessageContent from './MessageContent.vue'
 import MessageHeader from './MessageHeader.vue'
 import { Answer } from '/@/apis/parser/answer'
@@ -42,6 +43,7 @@ const user = {
   align-items: center;
   text-align: center;
   gap: 2px;
+  padding-left: 16px;
   color: #919191;
 }
 

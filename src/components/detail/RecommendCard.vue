@@ -2,16 +2,14 @@
   <div class="cardbox">
     <p class="title">関連する質問</p>
     <div class="link-container">
-      <a
+      <router-link
         v-for="recommend in limitedRecommends"
         :key="recommend.id"
-        :href="`/${recommend.id}`"
-        target="_blank"
-        rel="noopener noreferrer"
+        :to="`/${recommend.id}`"
         class="link"
       >
         {{ recommend.content }}
-      </a>
+      </router-link>
     </div>
   </div>
 </template>

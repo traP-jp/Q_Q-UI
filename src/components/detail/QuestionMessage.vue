@@ -13,12 +13,13 @@
           <p>{{ question.favs }}</p>
         </div>
       </div>
-      <opne-in-traq :id="question.id" />
+      <open-in-tra-q :id="question.id" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import OpenInTraQ from './OpenInTraQ.vue'
 import MessageContent from './MessageContent.vue'
 import MessageHeader from './MessageHeader.vue'
 import { Question } from '/@/apis/parser/question'
@@ -44,6 +45,7 @@ const user = {
   justify-content: flex-start;
   gap: 8px;
   text-align: center;
+  padding-left: 16px;
   color: #919191;
 }
 .message-footer {
