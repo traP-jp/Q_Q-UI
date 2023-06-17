@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Q_Q</h1>
+    <h1>(Q_Q)</h1>
   </div>
 </template>
 
