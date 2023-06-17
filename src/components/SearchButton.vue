@@ -19,7 +19,7 @@ import SearchSVG from '/@/assets/search.svg'
 
 <style scoped>
 .SearchArea {
-  margin: 0 auto;
+  margin: 100px auto;
   max-width: 600px;
   display: grid;
   place-content: center;
