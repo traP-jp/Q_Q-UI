@@ -29,7 +29,8 @@ import SearchSVG from '/@/assets/search.svg'
   padding-left: 7px;
   grid-template-columns: 1fr 50px;
   grid-template-rows: auto;
-  border: solid 2px black;
+  border: solid 1px #d9d9d9;
+  box-shadow:2px 2px 4px 2px #d9d9d9;
   border-radius: 10px;
   /* background-color: aqua;  */
 }
