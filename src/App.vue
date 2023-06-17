@@ -1,14 +1,16 @@
 <template>
-  <div>
+  <div class="container">
     <app-header-vue />
-    <Suspense>
-      <template #default>
-        <router-view />
-      </template>
-      <template #fallback>
-        <loading />
-      </template>
-    </Suspense>
+    <main>
+      <Suspense>
+        <template #default>
+          <router-view />
+        </template>
+        <template #fallback>
+          <loading />
+        </template>
+      </Suspense>
+    </main>
   </div>
 </template>
 
@@ -16,4 +18,10 @@
 import AppHeaderVue from './components/AppHeader.vue'
 </script>
 
-<style scoped></style>
+<style scoped>
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-rows: auto 1fr;
+}
+</style>
