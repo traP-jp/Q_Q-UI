@@ -39,7 +39,7 @@ export const sampleQuestionDetails: QuestionDetail = {
     stamps: [
       {
         id: 'ee5287c0-10b1-4c14-afa0-de007c801faf',
-        message_id: 'ee5287c0-10b1-4c14-afa0-de007c801faf',
+        messageId: 'ee5287c0-10b1-4c14-afa0-de007c801faf',
         count: 2
       }
     ],
