@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="wrapper">
     <header class="header">
       <p class="title">Q_Q</p>
       <header-search-input v-model="query" placeholder="Q&Aを探す" />
@@ -15,9 +15,15 @@ const query = ref('')
 </script>
 
 <style scoped>
-.container {
+.wrapper {
+  position: fixed;
+  background-color: white;
+  z-index: 1000;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 64px;
+  border-bottom: 1px solid #dcdedf;
 }
 
 .header {

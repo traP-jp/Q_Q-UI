@@ -64,6 +64,33 @@ export const sampleQuestionDetails: QuestionDetail = {
       createdAt: '2021-01-01T00:00:00.000Z',
       updatedAt: '2021-01-01T00:00:00.000Z',
       stamps: []
+    },
+    {
+      id: '4ebc8527-b18a-4ce1-b135-09e509dd1b66',
+      userId: '7dc2a2b3-f57b-4f69-8324-7d89dc677c43',
+      content: 'カレーがいいです',
+      favs: 2,
+      createdAt: '2021-01-01T00:00:00.000Z',
+      updatedAt: '2021-01-01T00:00:00.000Z',
+      stamps: []
+    },
+    {
+      id: '4ebc8527-b18a-4ce1-b135-09e509dd1b66',
+      userId: '7dc2a2b3-f57b-4f69-8324-7d89dc677c43',
+      content: 'カレーがいいです',
+      favs: 2,
+      createdAt: '2021-01-01T00:00:00.000Z',
+      updatedAt: '2021-01-01T00:00:00.000Z',
+      stamps: []
+    },
+    {
+      id: '4ebc8527-b18a-4ce1-b135-09e509dd1b66',
+      userId: '7dc2a2b3-f57b-4f69-8324-7d89dc677c43',
+      content: 'カレーがいいです',
+      favs: 2,
+      createdAt: '2021-01-01T00:00:00.000Z',
+      updatedAt: '2021-01-01T00:00:00.000Z',
+      stamps: []
     }
   ]
 }
