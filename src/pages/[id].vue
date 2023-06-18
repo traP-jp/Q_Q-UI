@@ -1,8 +1,7 @@
 <template>
   <page-container>
     <p class="main-title">
-      競技プログラミングについて教えてほしいです。
-      UnionFindをC++で実装したいんですが、うまくいきません。どうすれば良いですか
+      {{ pageTitle }}
     </p>
     <div v-if="questionDetail" class="card-container">
       <question-message :question="questionDetail.question" />
