@@ -7,7 +7,7 @@ import { Icon } from '@iconify/vue'
 <template>
   <div>
     <div v-for="details in sampleQuestions" :key="details.id" class="question">
-      <RouterLink to="#"><p class="content">{{ details.content }}</p></RouterLink>
+      <router-link to="#"><p class="content">{{ details.content }}</p></router-link>
       <div class="subcontent">
         <p class="createdAt">{{ details.createdAt }}</p>
         <div class="response-num">
@@ -16,7 +16,7 @@ import { Icon } from '@iconify/vue'
         </div>
         <div class="tagsarea">
           <div v-for="tags1 in details.tags" :key="tags1">
-            <RouterLink to="#"><div class="tags">#{{ tags1 }}</div></RouterLink>
+            <router-link to="#"><div class="tags">#{{ tags1 }}</div></router-link>
           </div>
         </div>
       </div>
