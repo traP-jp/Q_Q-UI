@@ -2,7 +2,7 @@
   <div class="wrapper">
     <header class="header">
       <router-link to="/"><img src="/@/assets/Q_Q.png" alt="icon" class="icon" /></router-link>
-      <p class="title">Q_Q</p>
+      <router-link to="/"><p class="title">Q_Q</p></router-link>
       <header-search-input v-model="query" placeholder="Q&Aを探す" />
     </header>
   </div>
@@ -49,5 +49,8 @@ const query = ref('')
 .icon{
   height: 35px;
   width: auto;
+}
+a{
+  text-decoration: none;
 }
 </style>
