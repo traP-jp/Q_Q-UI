@@ -1,7 +1,8 @@
 <template>
   <page-container>
     <p class="main-title">
-      {{ pageTitle }}
+      競技プログラミングについて教えてほしいです。
+      UnionFindをC++で実装したいんですが、うまくいきません。どうすれば良いですか
     </p>
     <div v-if="questionDetail" class="card-container">
       <question-message :question="questionDetail.question" />
@@ -55,6 +56,11 @@ watchEffect(() => {
   font-weight: bold;
   margin-bottom: 1rem;
   margin-top: 2rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
 }
 .card-container {
   display: flex;
