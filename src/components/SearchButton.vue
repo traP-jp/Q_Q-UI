@@ -37,8 +37,6 @@ const value = computed({
   margin-bottom: 70px;
   max-width: 600px;
   display: grid;
-  place-content: center;
-  place-items: center;
   justify-items: center;
   align-items: center;
   padding-left: 7px;
@@ -50,7 +48,7 @@ const value = computed({
 }
 
 .SearchBox {
-  width: 500px;
+  width: 100%;
   padding-left: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
