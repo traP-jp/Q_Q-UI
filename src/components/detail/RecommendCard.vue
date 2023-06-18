@@ -44,5 +44,8 @@ const limitedRecommends = computed(() => props.recommends.slice(0, 3))
 .link {
   display: block;
   line-height: 2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 </style>

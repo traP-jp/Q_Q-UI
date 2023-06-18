@@ -1,6 +1,6 @@
 <template>
   <div class="cardbox">
-    <message-header v-if="user" :user="user" date="2023/01/02" />
+    <message-header v-if="user" :user="user" :date="question.updatedAt" />
     <message-content :content="question.content" />
     <div class="message-footer">
       <div class="toolbar">

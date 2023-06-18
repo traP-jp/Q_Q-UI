@@ -2,6 +2,7 @@
 import { RouterLink } from 'vue-router'
 import { Icon } from '@iconify/vue'
 import { Question } from '/@/apis/parser/question'
+import { getFullDayWithTimeString } from '/@/libs/date'
 
 interface Props {
   questions: Question[]
@@ -17,7 +18,9 @@ defineProps<Props>()
         ><p class="content">{{ question.content }}</p></router-link
       >
       <div class="subcontent">
-        <p class="createdAt">{{ question.createdAt }}</p>
+        <p class="createdAt">
+          {{ getFullDayWithTimeString(new Date(question.createdAt)) }}
+        </p>
         <div class="response-num">
           <icon icon="ic:outline-mode-comment" class="icon" />
           <p>{{ question.responseNum }}</p>

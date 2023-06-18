@@ -6,7 +6,7 @@
         <span class="display-name">{{ user.displayName }}</span
         ><span class="id-name">@{{ user.name }}</span>
       </p>
-      <p class="date">{{ date }}</p>
+      <p class="date">{{ getFullDayWithTimeString(new Date(date)) }}</p>
     </div>
   </div>
 </template>
@@ -14,6 +14,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { User } from '/@/apis/parser/user'
+import { getFullDayWithTimeString } from '/@/libs/date'
 
 interface Props {
   user: User
