@@ -11,5 +11,7 @@ export const getDayString = (date: Date): string =>
 export const getFullDayString = (date: Date): string =>
   date.getFullYear() + '/' + getDayString(date)
 
-export const getFullDayWithTimeString = (date: Date): string =>
-  getFullDayString(date) + ' ' + getTimeString(date)
+export const getFullDayWithTimeString = (date: Date): string => {
+  const jst = new Date(date.getTime() + 9 * 60 * 60 * 1000)
+  return getFullDayString(jst) + ' ' + getTimeString(jst)
+}
