@@ -1,6 +1,6 @@
 <template>
   <div class="cardbox">
-    <message-header :user="user" date="2023/01/02" />
+    <message-header v-if="user" :user="user" :date="answer.updatedAt" />
     <message-content :content="answer.content" />
     <div class="message-footer">
       <div class="toolbar">
@@ -18,19 +18,19 @@ import MessageContent from './MessageContent.vue'
 import MessageHeader from './MessageHeader.vue'
 import { Answer } from '/@/apis/parser/answer'
 import { Icon } from '@iconify/vue'
+import { useUser } from '/@/apis/user'
+import { watchEffect } from 'vue'
 
 interface Props {
   answer: Answer
 }
 
 const props = defineProps<Props>()
+const { userId, user } = useUser()
 
-// TODO: get user from props.question.userId
-const user = {
-  id: props.answer.userId,
-  name: 'toshi00',
-  displayName: 'とし🍕'
-}
+watchEffect(() => {
+  userId.value = props.answer.userId
+})
 </script>
 
 <style scoped>
