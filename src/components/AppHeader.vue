@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <header class="header">
-      <img src="/@/assets/Q_Q.png" alt="icon" class="icon" />
+      <router-link to="/"><img src="/@/assets/Q_Q.png" alt="icon" class="icon" /></router-link>
       <p class="title">Q_Q</p>
       <header-search-input v-model="query" placeholder="Q&Aを探す" />
     </header>
@@ -11,6 +11,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import HeaderSearchInput from './HeaderSearchInput.vue'
+import { RouterLink } from 'vue-router';
 
 const query = ref('')
 </script>
