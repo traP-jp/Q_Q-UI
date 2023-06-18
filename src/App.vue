@@ -14,6 +14,10 @@
 
 <script setup lang="ts">
 import AppHeaderVue from './components/AppHeader.vue'
+
+// for code highlight (markdown)
+const $html = document.documentElement
+$html.dataset['codeHighlight'] = 'light'
 </script>
 
 <style scoped>

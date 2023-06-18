@@ -1,0 +1,29 @@
+// KaTeXのCSSは遅延読み込みするのでmain.tsを参照
+$link-color: #0366d6;
+$hr-color: #e1e4e8;
+$h6-color: #6a737d;
+$quote-text-color: #6a737d;
+$quote-bar-color: #dfe2e5;
+$code-background-color: #f6f8fa;
+$code-file-name-background-color: rgba(0, 0, 0, 0.1);
+$table-td-border-color: #dfe2e5;
+$table-tr-border-color: #c6cbd1;
+$table-tr-background-color: #fff;
+$table-tr-background-color2: #f6f8fa;
+$img-background-color: #fff;
+$mark-color: black;
+$mark-background-color: yellow;
+$spoiler-background-color: black;
+$spoiler-shown-background-color: rgba(0, 0, 0, 0.1);
+$link-text-color: #005bac;
+$link-background-color: transparent;
+$link-highlight-text-color: #005bac;
+$link-highlight-background-color: #faffad;
+@import '@traptitech/traq-markdown-it/src/css/markdown';
+
+html[data-code-highlight='light'] {
+  @import 'highlight.js/styles/atom-one-light';
+}
+html[data-code-highlight='dark'] {
+  @import 'highlight.js/styles/atom-one-dark';
+}
