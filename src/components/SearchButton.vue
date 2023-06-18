@@ -1,19 +1,33 @@
 <script setup lang="ts">
-const SearchName = ''
 import SearchSVG from '/@/assets/search.svg'
+import { computed } from 'vue'
+
+interface Props {
+  modelValue: string
+  placeholder: string
+}
+
+const emit = defineEmits<{
+  (e: 'update:modelValue', value: string): void
+}>()
+
+const props = defineProps<Props>()
+const value = computed({
+  get: () => props.modelValue,
+  set: v => emit('update:modelValue', v)
+})
 </script>
 
 <template>
   <p id="type-3"></p>
   <div class="SearchArea">
     <input
-      v-model="SearchName"
+      v-model="value"
       class="SearchBox"
       type="text"
-      placeholder="検索"
+      :placeholder="placeholder"
     />
     <img :src="SearchSVG" alt="検索" class="icon" />
-
   </div>
 </template>
 
@@ -30,9 +44,8 @@ import SearchSVG from '/@/assets/search.svg'
   grid-template-columns: 1fr 50px;
   grid-template-rows: auto;
   border: solid 1px #d9d9d9;
-  box-shadow:2px 2px 4px 2px #d9d9d9;
+  box-shadow: 2px 2px 4px 2px #d9d9d9;
   border-radius: 10px;
-
 }
 
 .SearchBox {

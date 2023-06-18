@@ -10,7 +10,7 @@
         :key="answer.id"
         :answer="answer"
       />
-      <recommend-card :recommends="sampleQuestions" />
+      <recommend-card v-if="recommends" :recommends="recommends" />
     </div>
     <div v-else-if="error">
       <p>エラーが発生しました</p>
@@ -21,7 +21,6 @@
 
 <script setup lang="ts">
 import PageContainer from '/@/components/PageContainer.vue'
-import { sampleQuestions } from '/@/apis/question.sample'
 import RecommendCard from '/@/components/detail/RecommendCard.vue'
 import AnswerMessage from '/@/components/detail/AnswerMessage.vue'
 import QuestionMessage from '/@/components/detail/QuestionMessage.vue'
@@ -30,6 +29,7 @@ import { generateTitle } from '/@/libs/generateTitle'
 import { useParam } from '/@/use/param'
 import { useQuestion } from '/@/apis/question'
 import { computed, watchEffect } from 'vue'
+import { useRelated } from '/@/apis/relate'
 const id = useParam('id')
 
 const { question: questionDetail, questionId, error } = useQuestion()
@@ -41,6 +41,11 @@ const pageTitle = computed(() => {
   if (questionDetail === undefined || questionDetail.value === undefined)
     return '読み込み中...'
   return generateTitle(questionDetail.value.question.content)
+})
+
+const { questions: recommends, id: recommends_id } = useRelated()
+watchEffect(() => {
+  recommends_id.value = id.value
 })
 </script>
 
