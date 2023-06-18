@@ -27,9 +27,9 @@ import QuestionMessage from '/@/components/detail/QuestionMessage.vue'
 import { generateTitle } from '/@/libs/generateTitle'
 
 import { useParam } from '/@/use/param'
-import { useQuestion } from '/@/apis/question'
+import { useQuestion, useQuestions } from '/@/apis/question'
 import { computed, watchEffect } from 'vue'
-import { useRelated } from '/@/apis/relate'
+// import { useRelated } from '/@/apis/relate'
 const id = useParam('id')
 
 const { question: questionDetail, questionId, error } = useQuestion()
@@ -43,10 +43,10 @@ const pageTitle = computed(() => {
   return generateTitle(questionDetail.value.question.content)
 })
 
-const { questions: recommends, id: recommends_id } = useRelated()
-watchEffect(() => {
-  recommends_id.value = id.value
-})
+const { questions: recommends, query: recommends_id } = useQuestions() // useRelated()
+// watchEffect(() => {
+//   recommends_id.value = id.value
+// })
 </script>
 
 <style scoped>

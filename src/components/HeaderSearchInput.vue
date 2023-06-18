@@ -24,7 +24,11 @@ interface Props {
 }
 
 const onClick = () => {
-  router.push({ path: '/', query: { q: value.value } })
+  if (value.value === '') {
+    router.push({ path: '/' })
+  } else {
+    router.push({ path: '/', query: { q: value.value } })
+  }
 }
 
 const emit = defineEmits<{
