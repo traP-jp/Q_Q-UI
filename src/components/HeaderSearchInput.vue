@@ -5,6 +5,7 @@
       type="text"
       :placeholder="placeholder"
       class="input"
+      @keypress.enter="onClick"
     />
     <img :src="SearchSVG" alt="検索" class="icon" />
   </div>
@@ -13,10 +14,17 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import SearchSVG from '/@/assets/search.svg'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 interface Props {
   modelValue: string
   placeholder: string
+}
+
+const onClick = () => {
+  router.push({ path: '/', query: { q: value.value } })
 }
 
 const emit = defineEmits<{
