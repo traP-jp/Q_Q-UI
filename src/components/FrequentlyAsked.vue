@@ -13,7 +13,7 @@ defineProps<Props>()
 <template>
   <div>
     <div v-for="question in questions" :key="question.id" class="question">
-      <router-link to="#"
+      <router-link :to="`/${question.id}`"
         ><p class="content">{{ question.content }}</p></router-link
       >
       <div class="subcontent">
