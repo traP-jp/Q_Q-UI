@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
     <header class="header">
+      <img src="/@/assets/Q_Q.png" alt="icon" class="icon" />
       <p class="title">Q_Q</p>
       <header-search-input v-model="query" placeholder="Q&Aを探す" />
     </header>
@@ -28,7 +29,7 @@ const query = ref('')
 
 .header {
   display: grid;
-  grid-template-columns: 5fr 3fr;
+  grid-template-columns: 0.5fr 5fr 3fr;
   align-items: center;
   height: 64px;
   width: 100%;
@@ -42,5 +43,10 @@ const query = ref('')
   margin: 0;
   font-weight: bold;
   color: #262626;
+}
+
+.icon{
+  height: 35px;
+  width: auto;
 }
 </style>
