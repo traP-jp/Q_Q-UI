@@ -18,7 +18,7 @@ export const useRecommend = () => {
   // APIを修正する
   const { data, error } = useSWRV(
     () =>
-      query.value !== null && query.value.length === 0
+      query.value === null || query.value.length === 0
         ? `${baseUrl}/api/questions/`
         : `${baseUrl}/api/questions/?q=${query.value}`,
     fetcher
