@@ -4,7 +4,7 @@ import { z } from 'zod'
 import { baseUrl } from './baseUrl'
 import { questionSchema } from './parser/question'
 
-export const useRecommend = () => {
+export const useRelated = () => {
   const fetcher = async (url: string) => {
     const res = await fetch(url)
     if (!res.ok) {
@@ -14,18 +14,15 @@ export const useRecommend = () => {
     return z.array(questionSchema).parse(data)
   }
 
-  const query = ref<string | null>(null)
-  // APIを修正する
+  const id = ref<string | null>(null)
   const { data, error } = useSWRV(
-    () =>
-      query.value !== null && query.value.length === 0
-        ? `${baseUrl}/api/questions/`
-        : `${baseUrl}/api/questions/?q=${query.value}`,
+    // TODO: API先を修正する
+    () => id.value && `${baseUrl}/api/questions/?q=${id.value}`,
     fetcher
   )
 
   return {
-    query,
+    id,
     questions: data,
     error
   }
