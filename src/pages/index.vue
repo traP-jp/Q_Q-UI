@@ -29,6 +29,8 @@ watchEffect(() => {
   // TODO: enterkeyとかで更新する
   if (searchQuery.value) {
     router.push({ path: '/', query: { q: searchQuery.value } })
+  } else if (searchQuery.value === '') {
+    router.push({ path: '/' })
   }
 })
 </script>
