@@ -6,7 +6,8 @@ import type { Store, traQMarkdownIt } from '@traptitech/traq-markdown-it'
 // import { useChannelsStore } from '/@/store/entities/channels'
 // import { useGroupsStore } from '/@/store/entities/groups'
 // import { useStampsStore } from '/@/store/entities/stamps'
-import { useStamps } from '/@/apis/stamp'
+// import { useStamps } from '/@/apis/stamp'
+// import { useStampsStore } from '/@/stores/stamp'
 
 const storeProvider: Store = {
   getUser(_id) {
@@ -30,8 +31,9 @@ const storeProvider: Store = {
     return undefined
   },
   getStampByName(_name) {
-    const { getStampByName } = useStamps()
-    return getStampByName(_name)
+    // const { getStampByName } = useStampsStore()
+    // return getStampByName(_name)
+    return undefined
   },
   getUserByName(_name) {
     // const { findUserByName } = useUsersStore()
@@ -71,12 +73,14 @@ const waitForInitialFetch = async () => {
   // const { userGroupsMapInitialFetchPromise } = useGroupsStore()
   // const { bothChannelsMapInitialFetchPromise } = useChannelsStore()
   // const { stampsMapInitialFetchPromise } = useStampsStore()
+  // const { stampFetcher } = useStampsStore()
 
   await Promise.all([
     // usersMapInitialFetchPromise,
     // userGroupsMapInitialFetchPromise,
     // bothChannelsMapInitialFetchPromise,
     // stampsMapInitialFetchPromise,
+    // stampFetcher(),
     loadMd()
   ])
 }

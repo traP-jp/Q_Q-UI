@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@traptitech/traq-markdown-it": "^6.3.0",
+    "pinia": "^2.1.4",
     "ress": "^5.0.2",
     "sass": "^1.63.4",
     "swrv": "^1.0.3",
