@@ -1,22 +1,32 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router';
-import { sampleQuestions } from '/@/apis/question.sample.ts'
+import { RouterLink } from 'vue-router'
 import { Icon } from '@iconify/vue'
+import { Question } from '/@/apis/parser/question'
+
+interface Props {
+  questions: Question[]
+}
+
+defineProps<Props>()
 </script>
 
 <template>
   <div>
-    <div v-for="details in sampleQuestions" :key="details.id" class="question">
-      <RouterLink to="#"><p class="content">{{ details.content }}</p></RouterLink>
+    <div v-for="question in questions" :key="question.id" class="question">
+      <router-link to="#"
+        ><p class="content">{{ question.content }}</p></router-link
+      >
       <div class="subcontent">
-        <p class="createdAt">{{ details.createdAt }}</p>
+        <p class="createdAt">{{ question.createdAt }}</p>
         <div class="response-num">
           <icon icon="ic:outline-mode-comment" class="icon" />
-          <p>{{ details.responseNum }}</p>
+          <p>{{ question.responseNum }}</p>
         </div>
         <div class="tagsarea">
-          <div v-for="tags1 in details.tags" :key="tags1">
-            <RouterLink to="#"><div class="tags">#{{ tags1 }}</div></RouterLink>
+          <div v-for="tags1 in question.tags" :key="tags1">
+            <router-link to="#"
+              ><div class="tags">#{{ tags1 }}</div></router-link
+            >
           </div>
         </div>
       </div>
@@ -82,7 +92,7 @@ import { Icon } from '@iconify/vue'
   border-radius: 8px;
   overflow: hidden;
 }
-a{
+a {
   text-decoration: none;
 }
 </style>
