@@ -43,7 +43,7 @@ const pageTitle = computed(() => {
   return generateTitle(questionDetail.value.question.content)
 })
 
-const { questions: recommends, query: recommends_id } = useQuestions() // useRelated()
+const { questions: recommends } = useQuestions() // useRelated()
 // watchEffect(() => {
 //   recommends_id.value = id.value
 // })
