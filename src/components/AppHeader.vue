@@ -1,10 +1,10 @@
 <template>
   <div class="wrapper">
     <header class="header">
-      <router-link to="/"
-        ><img src="/@/assets/Q_Q.png" alt="icon" class="icon"
-      /></router-link>
-      <router-link to="/"><p class="title">Q_Q</p></router-link>
+      <router-link to="/" class="link-group"
+        ><img src="/@/assets/Q_Q.png" alt="icon" class="icon" />
+        <p class="title">Q_Q</p></router-link
+      >
       <header-search-input v-model="query" placeholder="Q&Aを探す" />
     </header>
   </div>
@@ -32,7 +32,7 @@ const query = ref('')
 
 .header {
   display: grid;
-  grid-template-columns: 0.5fr 5fr 3fr;
+  grid-template-columns: 5fr 3fr;
   align-items: center;
   height: 64px;
   width: 100%;
@@ -46,13 +46,26 @@ const query = ref('')
   margin: 0;
   font-weight: bold;
   color: #262626;
+  text-decoration: none;
+}
+
+.link-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  gap: 8px;
 }
 
 .icon {
   height: 35px;
   width: auto;
+  transform: rotate(0deg);
+  transition-timing-function: ease-in-out;
+  transition: 0.5s;
 }
-a {
-  text-decoration: none;
+
+.icon:hover {
+  transform: rotate(180deg);
 }
 </style>
