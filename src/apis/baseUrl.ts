@@ -1,3 +1,1 @@
-export const baseUrl = import.meta.env.DEV
-  ? 'http://localhost:8000'
-  : `${location.protocol}//${location.host}`
+export const baseUrl = `${location.protocol}//${location.host}`
