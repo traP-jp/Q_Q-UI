@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router';
+import { RouterLink } from 'vue-router'
 import { sampleQuestions } from '/@/apis/question.sample.ts'
 import { Icon } from '@iconify/vue'
 </script>
@@ -7,7 +7,9 @@ import { Icon } from '@iconify/vue'
 <template>
   <div>
     <div v-for="details in sampleQuestions" :key="details.id" class="question">
-      <router-link to="#"><p class="content">{{ details.content }}</p></router-link>
+      <router-link to="#"
+        ><p class="content">{{ details.content }}</p></router-link
+      >
       <div class="subcontent">
         <p class="createdAt">{{ details.createdAt }}</p>
         <div class="response-num">
@@ -16,7 +18,9 @@ import { Icon } from '@iconify/vue'
         </div>
         <div class="tagsarea">
           <div v-for="tags1 in details.tags" :key="tags1">
-            <router-link to="#"><div class="tags">#{{ tags1 }}</div></router-link>
+            <router-link to="#"
+              ><div class="tags">#{{ tags1 }}</div></router-link
+            >
           </div>
         </div>
       </div>
@@ -82,7 +86,7 @@ import { Icon } from '@iconify/vue'
   border-radius: 8px;
   overflow: hidden;
 }
-a{
+a {
   text-decoration: none;
 }
 </style>
